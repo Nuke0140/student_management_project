@@ -24,6 +24,10 @@ from .import views,Hod_views,Staff_views,Student_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('base/',views.BASE,name='base'),
-    #path path
-    path('login/',views.Login,name='login')
+    #login path path
+    path('',views.Login,name='login'),
+    path("doLogin",views.doLogin,name="doLogin"), 
+
+
+
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) # 6. here  we set our media files 
